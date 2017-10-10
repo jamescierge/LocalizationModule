@@ -10,7 +10,8 @@ import Foundation
 
 public extension String {
     public var localized: String {
-        let bundle = Bundle.init(identifier: "com.monscierge.LocalizationModule")!
-        return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
+//        let bundle = Bundle.init(identifier: "com.monscierge.LocalizationModule")!
+        return NSLocalizedString(self, comment: "")
+//        return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
     }
 }
