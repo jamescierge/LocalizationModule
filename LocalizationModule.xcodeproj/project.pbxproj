@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		47EA279A1F8D5E4700079D70 /* LocalizationModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 47EA27981F8D5E4700079D70 /* LocalizationModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47EA27A21F8D5FB300079D70 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47EA27A41F8D5FB300079D70 /* Localizable.strings */; };
+		47EA27A81F8D601400079D70 /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EA27A71F8D601400079D70 /* String+Localize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		47EA27951F8D5E4700079D70 /* LocalizationModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocalizationModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EA27981F8D5E4700079D70 /* LocalizationModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizationModule.h; sourceTree = "<group>"; };
 		47EA27991F8D5E4700079D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47EA27A31F8D5FB300079D70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		47EA27A51F8D5FBD00079D70 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		47EA27A61F8D5FC500079D70 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		47EA27A71F8D601400079D70 /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,8 @@
 			children = (
 				47EA27981F8D5E4700079D70 /* LocalizationModule.h */,
 				47EA27991F8D5E4700079D70 /* Info.plist */,
+				47EA27A41F8D5FB300079D70 /* Localizable.strings */,
+				47EA27A71F8D601400079D70 /* String+Localize.swift */,
 			);
 			path = LocalizationModule;
 			sourceTree = "<group>";
@@ -95,6 +103,7 @@
 				TargetAttributes = {
 					47EA27941F8D5E4700079D70 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -105,6 +114,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fr,
+				de,
 			);
 			mainGroup = 47EA278B1F8D5E4700079D70;
 			productRefGroup = 47EA27961F8D5E4700079D70 /* Products */;
@@ -121,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47EA27A21F8D5FB300079D70 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,16 +143,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47EA27A81F8D601400079D70 /* String+Localize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		47EA27A41F8D5FB300079D70 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47EA27A31F8D5FB300079D70 /* en */,
+				47EA27A51F8D5FBD00079D70 /* fr */,
+				47EA27A61F8D5FC500079D70 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		47EA279B1F8D5E4700079D70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -201,6 +228,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -253,6 +281,7 @@
 		47EA279E1F8D5E4700079D70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +295,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.monscierge.LocalizationModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -274,6 +304,7 @@
 		47EA279F1F8D5E4700079D70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

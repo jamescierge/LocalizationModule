@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  LocalizationModule
+
+  Created by James McPherson on 10/10/17.
+  Copyright © 2017 James McPherson. All rights reserved.
+*/
+
+"Hello, World" = "Bonjour le monde"
+
