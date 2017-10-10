@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension String {
-    var localized: String {
+public extension String {
+    public var localized: String {
         let bundle = Bundle.init(identifier: "com.monscierge.LocalizationModule")!
         return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
     }
