@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  LocalizationModule
+
+  Created by James McPherson on 10/11/17.
+  Copyright © 2017 James McPherson. All rights reserved.
+*/
+
+"Hello" = "Hallo";
